@@ -1,5 +1,25 @@
 @charset "utf-8";
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    background-image: url("images/Stomatopoda3.jpg");
+    background-size: cover;
+    background-position: 50% 25%;
+    padding: 30px 60px;
+  }
 
+h1{
+    text-align: center;
+}
 header {
     
+}
+
+footer {
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+    margin: px;
+
 }
