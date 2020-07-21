@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html>
-<body>
-<!-- creating the squares and columns divs -->
-<div id="stack">
-	<div class="column_left"> 
-		<div>
-        	<div>	
-			</div>
-    	</div>
-    	<div>
-        	<div></div>
-    	</div>
- 	</div>
- 	<div class="column_right">
-    	<div>
-        	<div>	
-			</div>
-    	</div>
-    	<div>
-        	<div>
-			</div>
-    	</div>
-  	</div>
-</div>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
 
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
 
+      .main-content {
+        background-color: yellow;
+      }
 
-#stack{
-	height:20rem;
-	width:20rem;
-	display:flex;
-	flex-direction:row;
-	justify-content:space-evenly;
-	align-items:center;
-	border: solid black 4px;
-}
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
 
-.column_left, .column_right{
-	
-    height:18rem;
-	width:8rem;
-    margin:auto;
-	display:flex;
-	flex-direction:column;
-    justify-content:space-evenly;
-    border: solid black 4px;
-    }
-.column_left>div, .column_right>div{
-	height:5rem;
-	width:5rem ;
-	display:flex;
-	align-items:center;
-    justify-content:center;
-    margin:auto;
-    border: solid black 4px;
-}  
-
-div>div>div>div{
-    height:2.5rem;
-	width:2.5rem; 
-    border: solid black 4px;
-}
-
-
-
-</style>
-<script>
-var principal = document.querySelector('#stack');
-principal.style.backgroundColor = 'red';
-
-var colEsq = document.getElementsByClassName('column_left')[0];
-colEsq.style.backgroundColor = 'blue';
-
-
-</script>
-
-</body>
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        /*
+        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        - document.getElementById()
+        - document.getElementsByClassName()
+        - document.getElementsByTagName()
+ Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto, e sim realizando o exercício)
+ Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+ Crie uma função que mude a cor do quadrado vermelho para branco.
+ Crie uma função que corrija o texto da tag <h1>.
+ Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+		//Exercicio 1
+		function changeText(){
+			let paragrafo = document.getElementsByTagName('p')[1];
+			paragrafo.innerHTML = 'Vagner Pereira de sousa - Full Stack Developer de respeito!';
+		}
+		changeText();
+		//Exercicio 2
+		function changeYellow(){
+			let color = document.getElementsByClassName('main-content')[0];
+			color.style.background = 'rgb(76,164,109)';
+		}
+		changeYellow();
+		// Exercicio 3
+		function changeRed(){
+			let color = document.getElementsByClassName('center-content')[0];
+			color.style.background = 'white';
+		}
+		changeRed();
+    </script>
+  </body>
 </html>
