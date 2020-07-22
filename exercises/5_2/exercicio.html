@@ -62,9 +62,14 @@
       title.innerHTML = 'Exercício 5.2 - JavaScript';
       document.body.appendChild(title);
       // 2 - Adicione a tag div com a classe main-content como filho da tag body;
-      const elementDivMain = document.createElement('div');
-      elementDivMain.className = 'main-content';
-      document.body.appendChild(elementDivMain);
+      let divMainContent = document.createElement('div');
+      divMainContent.className = 'main-content';
+      document.body.appendChild(divMainContent);
+      // 3 -Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let divCenterContent = document.createElement('div');
+      divCenterContent.className = 'center-content';
+      document.querySelector('.main-content').appendChild(divCenterContent);
+      // 
     </script>
   </body>
 </html>
