@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    <div>
+        <h1>Personalize a pagina:</h1>
+        <p>Cor de fundo da tela: <input type="text" id='cor-fundo'> </p> 
+        <p>Cor do texto: <input type="text" id="cor-texto"> </p>
+        <p>Tamanho da fonte: <input type="text" id="tam-fonte"> </p>
+        <p>Espaçamento entre as linhas do texto: <input type="text" id="esp-linhas"> </p>
+        <p>Tipo da fonte: <input type="text" id="fonte"> </p>
+        <button>Modificar</button>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus dapibus diam, ac placerat lectus feugiat nec. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Vestibulum maximus convallis nisl id fermentum. Cras rutrum, libero ut rhoncus cursus, arcu arcu pulvinar nulla, eu pellentesque felis velit euismod tortor. Nunc placerat ligula et metus iaculis rhoncus. Integer vulputate mauris et ex scelerisque porta.</p> 
+    <p>Donec cursus sit amet turpis sit amet semper. Curabitur efficitur euismod finibus. Nullam vel dictum neque. Aenean quam magna, blandit vehicula lobortis ut, tincidunt et ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus pellentesque justo id elementum. Vestibulum a quam vitae ex maximus fermentum. Nunc malesuada, nunc eu efficitur consectetur, ex arcu hendrerit nunc, non placerat massa quam quis sapien. Maecenas convallis eu urna facilisis imperdiet. Duis ex lacus, placerat a pretium sed, hendrerit nec nibh. Quisque aliquet ipsum sem, ut tempus sem facilisis non. Sed molestie hendrerit eleifend. Phasellus dignissim orci sit amet dictum ullamcorper. Nunc congue a mi a faucibus. Maecenas ante felis, mattis non nunc blandit, mattis tristique erat. Sed nec dui viverra, molestie tortor a, ultricies leo.</p>
+    <p>Curabitur consectetur metus ac turpis aliquet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut urna quis sem pharetra lobortis. Nullam semper enim sit amet gravida consequat. Phasellus nec leo ut massa blandit convallis. Integer scelerisque mi sed facilisis dapibus. Sed scelerisque, eros sit amet laoreet aliquam, dui ex tempus turpis, at suscipit metus arcu at erat. Morbi in eleifend tortor. Suspendisse nec arcu in felis auctor tempus a sed lorem. Nullam tempus massa leo, id volutpat orci lacinia non. Proin pretium turpis eu diam faucibus fringilla. Donec volutpat dui quis est egestas, sit amet convallis eros dapibus. Maecenas mi odio, iaculis vitae euismod ut, varius quis nisi. Nullam sit amet nulla ultrices, mattis felis quis, ultricies elit. Proin tempus ultricies fringilla.</p>
+    <p>Aenean dolor arcu, viverra a facilisis vitae, vulputate vestibulum metus. Praesent semper blandit dolor quis venenatis. Ut id nulla a orci tincidunt condimentum in eu lacus. Aenean urna lacus, consequat sit amet tortor quis, semper pellentesque nulla. Duis eu hendrerit mauris. Pellentesque ornare magna diam, imperdiet porttitor magna laoreet ac. Praesent eu tellus leo. Ut eget consectetur tortor.</p>
+    <p>Curabitur varius velit porttitor, porttitor quam id, vestibulum libero. Pellentesque efficitur dignissim ante sit amet faucibus. In hac habitasse platea dictumst. Ut eu fermentum erat, ut consequat ipsum. Vivamus pharetra orci dictum, egestas libero sit amet, ornare quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Curabitur in tempor quam.</p>
+
+<script>
+    let verifCorFundo = localStorage.getItem('corFundo');
+    if (verifCorFundo) {
+        document.getElementsByTagName('body')[0].style.backgroundColor = localStorage.getItem('corFundo');
+        document.getElementsByTagName('body')[0].style.color = localStorage.getItem('corTexto');
+        document.getElementsByTagName('body')[0].style.fontSize = localStorage.getItem('tamFont');
+        document.getElementsByTagName('body')[0].style.lineHeight = localStorage.getItem('espLinhas');
+        document.getElementsByTagName('body')[0].style.fontFamily = localStorage.getItem('fonte');
+    }
+    
+    var botao = document.getElementsByTagName('button')[0];
+    botao.addEventListener('click', function () {
+        // Altera o backgroundColor
+        var corFundo = document.getElementById('cor-fundo').value;
+        localStorage.setItem('corFundo', corFundo);
+        document.getElementsByTagName('body')[0].style.backgroundColor = corFundo;
+        // Altera a cor do texto
+        var corTexto = document.getElementById('cor-texto').value;
+        localStorage.setItem('corTexto', corTexto);
+        document.getElementsByTagName('body')[0].style.color = corTexto;
+        // Altera o tamanho da fonte
+        var tamFont = document.getElementById('tam-fonte').value;
+        localStorage.setItem('tamFont', tamFont);
+        document.getElementsByTagName('body')[0].style.fontSize = tamFont + 'px';
+        // Altera o espaçamento entre linhas 
+        var espLinhas = document.getElementById('esp-linhas').value;
+        localStorage.setItem('espLinhas', espLinhas);
+        document.getElementsByTagName('body')[0].style.lineHeight = espLinhas;
+        // Alterea a fonte
+        var fonte = document.getElementById('fonte').value;
+        localStorage.setItem('fonte', fonte);
+        document.getElementsByTagName('body')[0].style.fontFamily = fonte;
+
+    });
+    
+   
+    
+    
+    
+</script>
+</body>
+</html>
