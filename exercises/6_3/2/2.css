@@ -1,0 +1,12 @@
+. grupo-torre-1 {
+    display: flex;
+    justify-content: flex-end;
+    }
+    . grupo-torre-2 {
+    display: flex;
+    justify-content: center;
+    }
+    . grupo-torre-3 {
+    display: flex;
+    justify-content: flex-end;
+    }
