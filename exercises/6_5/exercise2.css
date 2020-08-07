@@ -1,6 +1,6 @@
 body {
     background-color: lemonchiffon ;
-    margin: 5px;
+    margin: 0px;
 }
 
 header h1{
@@ -37,6 +37,10 @@ footer{
 
 @media screen and (min-width: 800px) {
     body {
-        margin: 20px;
+        margin: 0px;
+    }
+    .main-content {
+        padding: 20px;
+        background-color: antiquewhite;
     }
 }
