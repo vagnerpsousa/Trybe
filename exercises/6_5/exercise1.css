@@ -1,0 +1,58 @@
+body {
+    font-size: 20px;
+    background-color: linen;
+    margin: 0px;
+}
+header {
+    background-color: #506693;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.main {
+    margin-top: 200px;
+}
+h1 {
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+h2 {
+    font-size: x-large ;
+    text-align: center;
+}
+p {
+    max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        background-color: navy;
+    }
+    body {
+        background-color: teal;
+        font-size: 25px;
+        margin: 7px;
+    }
+    figure {
+       float: left;
+    }
+   
+}
+@media screen and (min-width: 1250px) {
+    body {
+        background-color: tomato;
+        font-size: 30px;
+        margin: 15px;
+    }
+}
