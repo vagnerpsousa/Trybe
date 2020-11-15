@@ -1,5 +1,4 @@
 const myRemove = require('./exe2');
-const { TestScheduler } = require('jest');
 
 describe ('myRemove', () => {
     const a = [1, 2, 3, 4]
