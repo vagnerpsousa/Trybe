@@ -1,13 +1,12 @@
 import React from 'react';
+import './Order.css';
 
 class Order extends React.Component {
   render() {
-    const { user, product, price } = this.props.order;
+    const { user, product, price } = this.props.product;
 
     return (
-      <div className="order">
-        <p> {user} bought {product} for {price.value} {price.currency} </p>
-      </div>
+      <span className="order"> {user} bought {product} for </span>
     );
   }
 }

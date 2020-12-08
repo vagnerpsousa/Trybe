@@ -1,4 +1,3 @@
-// arquivo App.js, criado pelo create-react-app, modificado
 import React from 'react';
 import './App.css';
 import UserProfile from './UserProfile';
@@ -22,7 +21,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        {users.map((user, index) => <UserProfile key={index} user={user} />)}
+        {users.map(user => <UserProfile key={user.id.toString()} user={user} />)}
       </div>
     );
   }
