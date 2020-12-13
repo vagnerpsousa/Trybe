@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-//teste
+//teste2
 class App extends React.Component {
 
   constructor() {
