@@ -1,5 +1,4 @@
 const myFizzBuzz = require('./exe4');
-const { TestScheduler } = require('jest');
 
 describe('myFizzBuzz', () => {
     test('Number divisible by 3 and 5. Check if the return is as expected', () => {

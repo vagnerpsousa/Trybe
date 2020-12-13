@@ -1,29 +1,24 @@
-let randomNumber = () => Math.floor(Math.random() * 101);
+const service = require('./service');
 
-const isDivisible = (number) => (randomNumber() % number) === 0;
+describe("testando implementações", () => {
+  test("mockando função para receber 3 parâmetros e retornar sua multiplicação", () => {
+    service.randomNumber = jest.fn().mockImplementation((a, b, c) => a * b * c);
 
-describe('isDivisible', () => {
-  it('randomNumber() é chamada quando invocamos a isDivisible()', () => {
-    randomNumber = jest
-      .fn()
-    isDivisible();
-    expect(randomNumber).toHaveBeenCalled();
+    expect(service.randomNumber(2, 3, 4)).toBe(24);
+    expect(service.randomNumber).toHaveBeenCalled();
+    expect(service.randomNumber).toHaveBeenCalledTimes(1);
+    expect(service.randomNumber).toHaveBeenCalledWith(2, 3, 4);
   });
-  it('quando a randomNumber() retorna um número par e isDivisible() recebe um dois, o retorno é true', () => {
-    randomNumber = jest
-      .fn()
-      .mockReturnValue(12)
-    expect(isDivisible(2)).toBe(true);
-  });
-  it('a função isDivisible tem os retornos esperados', () => {
-    randomNumber = jest
-      .fn()
-      .mockReturnValueOnce(2)
-      .mockReturnValueOnce(3)
-      .mockReturnValue(4)
-    expect(isDivisible(2)).toBe(true);
-    expect(isDivisible(3)).toBe(true);
-    expect(isDivisible(3)).toBe(false);
-    expect(isDivisible(4)).toBe(true);
+
+  test("mockando função que recebe um parâmetro e retorna seu dobro", () => {
+    service.randomNumber.mockReset();
+    expect(service.randomNumber).toHaveBeenCalledTimes(0);
+
+    service.randomNumber.mockImplementation(a => a * 2);
+
+    expect(service.randomNumber(5)).toBe(10);
+    expect(service.randomNumber).toHaveBeenCalled();
+    expect(service.randomNumber).toHaveBeenCalledTimes(1);
+    expect(service.randomNumber).toHaveBeenCalledWith(5);
   });
 });
