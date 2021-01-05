@@ -2,12 +2,15 @@
   text-align: center;
 }
 
-.buttonGreen {
+
+.vermelho {
   background-color: green;
 }
 
-.buttonBlue {
-  background-color: blue;
+.verde {
+  background-color: red;
+
+
 }
 
 .App-logo {
