@@ -7,6 +7,7 @@ import colors from './data.js';
 class App extends React.Component {
 
   render() {
+    
     return (
       <div>
         <FancyButtons />
