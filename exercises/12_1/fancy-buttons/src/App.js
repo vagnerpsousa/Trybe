@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+
+import FancyButtons from './FancyButtons';
+import ColorFilter from './ColorFilter';
+import colors from './data.js';
 //teste
 class App extends React.Component {
 
@@ -46,6 +50,8 @@ class App extends React.Component {
       <button className={this.state.corButton2} onClick={this.handleClick2}>{this.state.numeroDeCliques2}</button>
       <button className={this.state.corButton3} onClick={this.handleClick3}>{this.state.numeroDeCliques3}</button>
     </div>
+
   }
+
 }
 export default App;
