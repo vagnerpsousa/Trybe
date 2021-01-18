@@ -2,11 +2,11 @@ import React from 'react';
 
 class PokemonDetails extends React.Component {
     render() {
-        const pokemons = this.props.pokemons;
+        const {pokemons, matche } = this.props;
         return (
             <div>
                 <span>More Details</span>
-                {pokemons.find((pokemon) => pokemon.id === '25')
+                {pokemons.filter((pokemon) => pokemon.id === matche.id)
                          .map(pokemon => (
                              <p>{pokemon.id}</p>
                          ))}
