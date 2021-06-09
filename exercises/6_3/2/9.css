@@ -1,9 +1,0 @@
-. grupo-torre-1 {
-    display: flex;
-    justify-content: space-between;
-    }
-    . grupo-torre-2 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
